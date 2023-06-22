@@ -1,0 +1,109 @@
+import 'package:flutter/material.
+
+class MyScreen extends StatelessWidget {
+
+  @override
+
+  Widget build(BuildContext context) {
+
+    return Scaffold(
+
+      appBar: AppBar(
+
+        title: Text('My Screen'),
+
+      ),
+
+      body: _buildBody(),
+
+    );
+
+  }Widget _buildBody() {
+
+    return Column(
+
+      crossAxisAlignment: CrossAxisAlignment.stretch,
+
+      children: [
+
+        Container(
+
+          color: Colors.blue,
+
+          padding: EdgeInsets.symmetric(vertical: 16),
+
+        ),
+
+        Container(
+
+          color: Colors.green,
+
+          padding: EdgeInsets.symmetric(vertical: 16),
+
+        ),
+
+        Container(
+
+          color: Colors.red,
+
+          padding: EdgeInsets.symmetric(vertical: 16),
+
+        ),Container(
+
+          color: Colors.yellow,
+
+          padding: EdgeInsets.symmetric(vertical: 16),
+
+        ),
+
+      ],
+
+    );
+
+  }
+
+} 
+
+
+
+import 'package:flutter/material.dart';
+
+import 'my_screen.dart';
+
+void main() {
+
+  runApp(MyApp());
+
+}
+
+class MyApp extends StatelessWidget {
+
+  @override
+
+  Widget build(BuildContext context) {
+
+    return MaterialApp(
+
+      title: 'My App',
+
+      theme: ThemeData(
+
+        primarySwatch: Colors.blue,
+
+      ),
+
+      home: MyScreen(), // This sets the initial route/screen
+
+      // You can also define named routes here
+
+      // routes: {
+
+      //   '/myScreen': (context) => MyScreen(),
+
+      // },
+      );
+
+  }
+
+}
+
